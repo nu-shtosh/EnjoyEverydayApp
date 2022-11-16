@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B873437F2925416000B0889A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873437E2925416000B0889A /* AppDelegate.swift */; };
 		B87343812925416000B0889A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87343802925416000B0889A /* SceneDelegate.swift */; };
-		B87343832925416000B0889A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87343822925416000B0889A /* ViewController.swift */; };
+		B87343832925416000B0889A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87343822925416000B0889A /* MainViewController.swift */; };
 		B87343862925416000B0889A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87343842925416000B0889A /* Main.storyboard */; };
 		B87343882925416100B0889A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87343872925416100B0889A /* Assets.xcassets */; };
 		B873438B2925416100B0889A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87343892925416100B0889A /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		B873437B2925416000B0889A /* EnjoyEverydayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnjoyEverydayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B873437E2925416000B0889A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B87343802925416000B0889A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B87343822925416000B0889A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B87343822925416000B0889A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B87343852925416000B0889A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B87343872925416100B0889A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B873438A2925416100B0889A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,39 @@
 		B873437D2925416000B0889A /* EnjoyEverydayApp */ = {
 			isa = PBXGroup;
 			children = (
-				B873437E2925416000B0889A /* AppDelegate.swift */,
-				B87343802925416000B0889A /* SceneDelegate.swift */,
-				B87343822925416000B0889A /* ViewController.swift */,
-				B87343842925416000B0889A /* Main.storyboard */,
+				B87343922925417900B0889A /* App */,
+				B87343942925419800B0889A /* ViewControllers */,
+				B87343932925418C00B0889A /* Storyboards */,
 				B87343872925416100B0889A /* Assets.xcassets */,
-				B87343892925416100B0889A /* LaunchScreen.storyboard */,
 				B873438C2925416100B0889A /* Info.plist */,
 			);
 			path = EnjoyEverydayApp;
+			sourceTree = "<group>";
+		};
+		B87343922925417900B0889A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B873437E2925416000B0889A /* AppDelegate.swift */,
+				B87343802925416000B0889A /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B87343932925418C00B0889A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B87343842925416000B0889A /* Main.storyboard */,
+				B87343892925416100B0889A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B87343942925419800B0889A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B87343822925416000B0889A /* MainViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B87343832925416000B0889A /* ViewController.swift in Sources */,
+				B87343832925416000B0889A /* MainViewController.swift in Sources */,
 				B873437F2925416000B0889A /* AppDelegate.swift in Sources */,
 				B87343812925416000B0889A /* SceneDelegate.swift in Sources */,
 			);
@@ -293,8 +317,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +327,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "nu-shtosh.EnjoyEverydayApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +349,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +359,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "nu-shtosh.EnjoyEverydayApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
